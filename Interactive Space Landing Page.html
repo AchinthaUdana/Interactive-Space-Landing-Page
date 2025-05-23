@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Space+Mono&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Dark theme by default (space aesthetic) */
+            /* Dark theme*/
             --bg-primary: #0a0a1a;
             --bg-secondary: #12122b;
             --text-primary: #e0e0ff;
@@ -19,7 +19,7 @@
             --planet-colors: #ff5252, #ffd740, #00bfa5, #7c4dff, #ff4081, #64ffda;
         }
 
-        /* Light mode (optional toggle) */
+        /* Light mode*/
         .light-mode {
             --bg-primary: #f0f0ff;
             --bg-secondary: #ffffff;
@@ -44,7 +44,6 @@
             overflow-x: hidden;
         }
 
-        /* Background Video */
         #space-video {
             position: fixed;
             top: 0;
@@ -601,7 +600,6 @@
             const themeToggle = document.getElementById('themeToggle');
             themeToggle.addEventListener('click', toggleTheme);
             
-            // Check for saved theme preference
             const savedTheme = localStorage.getItem('theme');
             if (savedTheme === 'light') {
                 document.body.classList.add('light-mode');
@@ -635,13 +633,13 @@
                 });
             }
             
-            // Initial check
+
             checkScroll();
             
-            // Check on scroll
+
             window.addEventListener('scroll', checkScroll);
             
-            // Smooth scrolling for navigation
+  
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     e.preventDefault();
@@ -651,7 +649,7 @@
                 });
             });
             
-            // 3D Planet Hover Effect
+
             const planet3dElements = document.querySelectorAll('.planet-3d');
             
             planet3dElements.forEach(planet => {
